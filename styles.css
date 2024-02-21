@@ -1,0 +1,277 @@
+﻿* 
+ 
+html {
+   font-size: 18px;
+}
+a, article, body, div, fieldset, figcaption, figure, footer, form, header, h1, 
+h2, h3, img, input, label, legend, li, nav, p, section, textarea, ul {
+   border: 0;
+   padding: 0;
+   margin: 0;
+}
+img {
+   max-width: 100%;
+   height: auto;
+   width: auto;
+}
+
+body{
+   animation: transitionIn 1s;
+}
+
+@keyframes transitionIn {
+   from{
+      opacity: 0;
+      transform: rotateX('-10deg');
+   }
+
+   to {
+      opacity: 1;
+      transform: rotateX('0')
+   }
+}
+
+
+/* global styles */
+p {
+   margin-top: 0.4em;
+   font-size: 1.1em;
+}
+
+/* body and page container */
+body {
+   font-family: Lato, Arial, Helvetica, sans-serif;
+   background: #000000;
+}
+.container {
+   max-width: 864px;
+   margin: 0 auto;
+   position: relative;
+   min-height: 100vh; 
+   max-height: 100vh;
+   width: 100vw; 
+   height: 100vh;
+}
+
+/* skip navigation link */
+p.skipnavigation {
+   margin: 0;
+}
+p.skipnavigation a {
+   position: absolute;
+   left: -10000px;
+}
+p.skipnavigation a:focus {
+   color: black;
+   background-color: snow;
+   top: 3.5%;
+   left: auto;
+   right: 3%;
+   z-index: 2;
+}
+
+/* header section */
+header {
+   background-color: white;
+   text-align: center;
+}
+h1 {
+   font-weight: 700;
+   font-size: 2em;
+}
+h1 img {
+   display: block;
+}
+
+/* site navigation */
+nav.sitenavigation {
+   padding-left: 10%;
+   background-color: rgb(241, 10, 10);
+}
+nav.sitenavigation li {
+   display: inline-block;
+   margin: 0.4em 0.6em;
+   font-size: 1.1em;
+}
+nav.sitenavigation a:link {
+   color: rgb(250, 236, 36);
+   text-decoration: none;
+}
+nav.sitenavigation a:visited {
+   color: #ffffff;
+}
+nav.sitenavigation a:hover, nav.sitenavigation a:focus {
+   color: yellow;
+   text-shadow: 1px -1px 0 #000000;
+}
+
+/* main content */
+article {
+   padding: 1% 5%;
+   text-align: left;
+   background-color: rgb(255,255,255);
+   overflow: auto;
+}
+h2 {
+   margin: 0 0 0.4em;
+   font-size: 1.8em;
+   font-weight: 700;
+}
+h3 {
+   margin: 1em 0 0.5em;
+   font-size: 1.2em;
+   font-weight: bold;
+   color: green;
+}
+figure {
+   max-width: 60%;
+   margin-bottom: 1em;
+   float: right;
+   clear: both;
+   text-align: center;
+}
+.scientific-name {
+   font-style: italic;
+}
+p.scientific-name {
+   margin: 0 0 0 1em;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+   border: 2px solid #333; 
+}
+td, th {
+   padding: 0 0.4em 0.8em;
+   font-size: 1.3em;
+   border-bottom: 3px solid #666;
+}
+
+td:first-child {
+   font-weight: bold;
+}
+
+/* form styles */
+form {
+   margin: 2%;
+   padding: 2%;
+   border: 2px solid black;
+   background-color: #0dcfe1;
+}
+.form-instructions {
+   color: rgb(225, 94, 94);
+}
+
+/* fieldset styles */
+fieldset {
+   margin: 0 0 1em 1em;
+}
+.submitbutton {
+   margin-bottom: 0;
+   text-align: center;
+}
+
+/* field styles */
+input, textarea {
+   border: 1px solid #dc8888;
+   padding: 0.2em;
+   font-size: 1em;
+}
+.contactinfo input:valid {
+   background-color: #ffffff;
+}
+input:focus, textarea:focus {
+   background-color: rgb(195, 241, 11);
+}
+.contactinfo input {
+   position: absolute;
+   left: 4em;
+}
+#nameinput, #emailinput {
+   max-width: 25em;
+   width: 75%;
+}
+#phoneinput {
+   width: 50%;
+   max-width: 12em;
+}
+#notes {
+   width: 96%;
+   margin-top: 0.5em;
+   display: block;
+}
+
+/* label styles */
+label {
+   font-size: 1em;
+}
+.contactinfo label {
+   margin: 0.7em 0;
+   display: block;
+   position: relative;
+}
+.contactinfo label:before {
+   content: "* ";
+   color: rgb(238, 238, 229);
+}
+
+/* footer section */
+footer {
+   width: 94%;
+   padding: 1% 1% 1% 5%;
+   background-color: yellow;
+   clear: both;
+   font-size: 1.1em;
+   display: inline-block;
+}
+
+/* print styles */
+@media print {
+   .container, h1, h2, p {
+      color: black;
+      background: white;
+   }
+   nav {
+      display: none;
+   }
+}
+@page {
+   margin: 1in;
+}
+
+
+.image-slider {
+   position: relative;
+   width: 600px;
+   height: 400px;
+   overflow: hidden;
+ }
+ 
+.image-slider img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+ 
+.image-slider img.active {
+   opacity: 1;
+}
+ 
+.navigation {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   display: flex;
+}
+ 
+.navigation button {
+   border: none;
+   padding: 5px 10px;
+   margin: 5px;
+   cursor: pointer;
+}
+

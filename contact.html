@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Contact</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="about.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div class="container">
+         <p class="skipnavigation"><a href="#contentstart">Skip navigation</a></p>
+         <nav class="sitenavigation">
+            <ul>
+               <li><a href="index.html">Home</a></li> 
+               <li><a href="about.html">About</a></li>
+               <li><a href="coursework.html">Coursework</a></li>
+               <li><a href="blog.html">Blog</a></li>
+               <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </nav>
+         <article id="contentstart">
+            <h2>Get in touch</h2>
+            <p>If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.
+            </p>
+            <form action="results.html">
+               <p class="form-instructions">* indicates a required field -- please provide either Email or Phone</p>
+               <fieldset class="contactinfo">
+                  <label for="nameinput">
+                     Name
+                     <input type="text" id="nameinput" name="name" required>
+                  </label>
+                  <label for="emailinput">
+                     Email
+                     <input type="email" id="emailinput" name="email">
+                  </label>
+                  <label for="phoneinput">
+                     Phone
+                     <input type="tel" id="phoneinput" name="phone">
+                  </label>
+               </fieldset>
+               <fieldset class="additionalinfo">
+                  <label for="notes">
+                     Specific questions or notes
+                     <textarea id="notes" name="notes" rows="7"></textarea>
+                  </label>
+               </fieldset>
+               <fieldset class="submitbutton">
+                  <input type="submit" id="submit" value="Submit">
+               </fieldset>
+            </form>
+         </article>
+         <footer>
+            <p>shreyvachhani10@gmail.com &#8226; Boston, MA &#8226; +1(508)-215-8669</p> 
+         </footer>
+      </div>
+   </body>
+</html>
